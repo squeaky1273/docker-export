@@ -1,10 +1,19 @@
-<p align="center"><strong style="color: red;">❌&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STOP: DO NOT CLONE THIS REPO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;❌</strong><br>Carefully <b>follow the instructions below</b> to ensure you <b>get credit</b> for this assignment.</p>
+# docker-export
 
----
+## Examples
 
-# 🐳 docker-starter
-
-_Use this required starter pack for all assignments in [BEW 2.2: DevOps, Deployments &amp; Containers](https://make.sc/bew2.2). Follow the instructions below, and submit the resulting repository on [Gradescope](https://make.sc/trackbew2.2) by the assigned due date._
+<!-- To view all the exported variables: -->
+```bash
+$ export -p
+```
+<!-- export a variable to be used in the terminal: -->
+```bash
+$ export name[=value]
+```
+<!-- To export shell function: -->
+```bash
+$ export -f function_name
+```
 
 ## 📂 Project Files
 
