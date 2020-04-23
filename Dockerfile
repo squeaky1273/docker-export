@@ -10,18 +10,17 @@ RUN apk add npm
 RUN npm install -g tldr
 
 # Print out description of 'export' command:
-RUN echo "export -p is previewing what variables will be exported to the terminal."
+RUN echo "export is moving variables and functions to the terminal to be used there."
 
 # Run the 'export' command:
-ENTRYPOINT [ "export" ]
-CMD [ "-p" ]
+CMD [ "tldr", "export"]
+
 
 # # Print out description of 'export variable' command:
 # RUN echo "export name=[value] is creating a variable to be used in the terminal"
 
 # # Run the 'export variable' command:
 # CMD ["export var1=1"]
-
 
 
 # # Print out description of 'export function' command:
