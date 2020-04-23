@@ -4,28 +4,28 @@ FROM alpine:latest
 
 # CMD ["echo", "Hello, world!"]
 
-# Install tldr export:
-RUN /bin/sh -c apk add tdlr
-
+# Install tldr:
+# RUN apk add export
+RUN apk add npm
+RUN npm install -g tldr
 
 # Print out description of 'export' command:
-RUN echo "export is moving a variable or function into the terminal in order to run it there"
+RUN echo "export -p is previewing what variables will be exported to the terminal."
 
 # Run the 'export' command:
-CMD ["tldr export"]
+ENTRYPOINT [ "export" ]
+CMD [ "-p" ]
+
+# # Print out description of 'export variable' command:
+# RUN echo "export name=[value] is creating a variable to be used in the terminal"
+
+# # Run the 'export variable' command:
+# CMD ["export var1=1"]
 
 
 
-# Print out description of 'export variable' command:
-RUN echo "export name=[value] is creating a variable to be used in the terminal"
+# # Print out description of 'export function' command:
+# RUN echo "export -f function_name is pushing a function to be used in the terminal"
 
-# Run the 'export variable' command:
-CMD ["tldr export var1=1"]
-
-
-
-# Print out description of 'export function' command:
-RUN echo "export -f function_name is pushing a function to be used in the terminal"
-
-# Run the 'export function' command:
-CMD ["tldr export -f test_func"]
+# # Run the 'export function' command:
+# CMD ["export -f test_func"]
